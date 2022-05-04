@@ -6,6 +6,7 @@ Traveller.belongsToMany(Location, {
   through: Trip,
   foreignKey: "location_id",
   foreignKey: "traveller_id",
+  unique: false,
 });
 
 // Trip.hasMany(Location, {
