@@ -13,7 +13,7 @@ Location.init(
     },
     name: {
       type: DataTypes.STRING,
-      allowNull: false,
+      // allowNull: false,
     },
   },
   {
@@ -21,7 +21,7 @@ Location.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "driver",
+    modelName: "location",
   }
 );
 

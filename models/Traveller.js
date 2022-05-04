@@ -10,6 +10,7 @@ Traveller.init(
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
+      unique: false,
     },
     name: {
       type: DataTypes.STRING,
@@ -18,9 +19,9 @@ Traveller.init(
     email: {
       type: DataTypes.STRING,
       allowNull: false,
-      validate: {
-        isEmail: true,
-      },
+      // validate: {
+      // isEmail: true,
+      // },
     },
   },
   {
@@ -28,7 +29,7 @@ Traveller.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "driver",
+    modelName: "traveller",
   }
 );
 

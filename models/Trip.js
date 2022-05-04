@@ -19,13 +19,28 @@ Trip.init(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
+    traveller_id: {
+      type: DataTypes.INTEGER,
+      unique: false,
+      references: {
+        model: "traveller",
+        key: "id",
+      },
+    },
+    location_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "location",
+        key: "id",
+      },
+    },
   },
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "driver",
+    modelName: "trip",
   }
 );
 
