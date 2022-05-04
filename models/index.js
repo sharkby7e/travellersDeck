@@ -3,10 +3,12 @@ const Trip = require("./Trip");
 const Location = require("./Location");
 
 Traveller.belongsToMany(Location, {
-  through: Trip,
+  through: {
+    model: Trip,
+    unique: false,
+  },
   foreignKey: "location_id",
   foreignKey: "traveller_id",
-  unique: false,
 });
 
 // Trip.hasMany(Location, {
