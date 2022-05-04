@@ -33,6 +33,7 @@ Trip.init(
         model: "location",
         key: "id",
       },
+      unique: false,
     },
   },
   {
